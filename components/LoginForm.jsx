@@ -32,19 +32,12 @@ const LoginForm = () => {
 
   return (
     <div className='flex flex-col'>
-        <Image 
-            src="/logo.png"
-            alt="Logo"
-            className='object-contain'
-            width={100}
-            height={100}
-        />
-        <div className='my-10 flex flex-col gap-3'>
+        <div className='my-10 flex flex-col gap-5'>
             <h1 className='font-bold text-3xl'>
-              Log in to your Account
+              Welcome to Orent!
             </h1>
-            <p className='text-gray-500'>
-              Welcome back ! Select method to log in:
+            <p className='text-gray-500 max-w-lg'>
+                You are one step away from getting the early access to Orent your orders Management.
             </p>
         </div>
         <div>
@@ -72,7 +65,7 @@ const LoginForm = () => {
                                     onClick={() => {
                                         signIn(provider.id)
                                     }}
-                                    className="flex gap-5 items-center px-10 rounded-md shadow-sm border py-3 font-semibold"
+                                    className="flex gap-5 items-center px-10 rounded-md shadow-sm border border-black py-3 font-semibold"
                                 >
                                     <Image 
                                         width={20}
@@ -80,13 +73,28 @@ const LoginForm = () => {
                                         alt={provider.name}
                                         src="/google-icon.svg"
                                     />
-                                    Google
+                                    Continue with Google
                                 </button>
                             ))
                         }
                     </>
                 )
             }
+        </div>
+
+        <div className="absolute bottom-20">
+            <p className="text-gray-500 text-sm mb-1">
+                By signing up you agree to our
+            </p>
+            <div className="flex items-center gap-2 text-sm">
+                <span className="underline cursor-pointer">
+                    Terms of Service
+                </span>
+                &
+                <span className="underline cursor-pointer">
+                    Privacy Policy
+                </span>
+            </div>
         </div>
     </div>
   )

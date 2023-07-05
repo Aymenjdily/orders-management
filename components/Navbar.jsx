@@ -8,17 +8,29 @@ import { useState } from 'react'
 
 import { useSession, signOut } from 'next-auth/react'
 
+import { useRouter } from 'next/navigation'
+
 const Navbar = () => {
     const {data:session} = useSession()
 
+    const router = useRouter()
+
     const [toggle, setToggle] = useState(false)
+
+    const goToLoginPage = () => {
+        router.push('/')
+
+        setTimeout(() => {
+            signOut()
+        }, 500);
+    }
 
   return (
     <header className='py-6 px-4'>
         <nav className='flex justify-between'>
             <Link href='/dashboard'>
                 <Image 
-                    src="/logo.png"
+                    src="/Logo-black.png"
                     alt="Logo"
                     className='object-contain'
                     width={100}
@@ -39,7 +51,7 @@ const Navbar = () => {
                             <Link href="" className="text-gray-500 hover:text-black duration-300">
                                 Delivers
                             </Link>
-                            <button className="bg-black px-8 py-2 rounded-md font-semibold border-2 border-black text-white" type="button" onClick={signOut}>
+                            <button className="bg-black px-8 py-2 rounded-md font-semibold border-2 border-black text-white" type="button" onClick={goToLoginPage}>
                                 Sign Out
                             </button>
                             <Link href="/profile">
@@ -89,11 +101,11 @@ const Navbar = () => {
                                             type="button"
                                             onClick={() => {
                                                 setToggle(false)
-                                                signOut()
+                                                goToLoginPage()
                                             }}
                                             className="mt-5 w-full bg-black px-8 py-2 rounded-md font-semibold hover:bg-white border-2 border-black hover:text-black duration-300 text-white"
                                         >
-                                            Sign Out
+                                                Sign Out
                                         </button>
                                     </div>
                                 )

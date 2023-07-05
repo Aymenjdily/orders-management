@@ -23,9 +23,9 @@ const UserList = () => {
         <h1 className='font-bold text-xl mb-5'>
             All Users
         </h1>
-        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+        <div class="relative overflow-x-auto shadow-xl sm:rounded-lg">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-200">
+                <thead class="text-xs text-gray-200 uppercase bg-black">
                     <tr>
                         <th class="px-6 py-3">
                             General Informations
@@ -38,7 +38,7 @@ const UserList = () => {
                 <tbody>
                     {
                         users && users.map((user) => (
-                            <tr key={user._id} class="bg-black border-b">
+                            <tr key={user._id} class=" bg-gray-500 border-b">
                                 <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
                                     <Image
                                         src={user.image}
@@ -48,10 +48,10 @@ const UserList = () => {
                                         className='rounded-full object-contain'
                                     />
                                     <div class="pl-3">
-                                        <div class="text-base font-semibold capitalize">
+                                        <div class="text-base text-white font-semibold capitalize">
                                             {user.username}
                                         </div>
-                                        <div class="font-normal text-gray-300">
+                                        <div class="font-normal text-gray-200">
                                             {user.email}
                                         </div>
                                     </div>  

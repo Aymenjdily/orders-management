@@ -13,19 +13,16 @@ const Dashboard = () => {
         {
             id: "orders",
             title: "orders",
-            image: "/box.svg",
             number: 52
         },
         {
             id: "products",
             title: "products",
-            image: "/product.svg",
             number: 10
         },
         {
             id: "delivers",
             title: "delivers",
-            image: "/deliver.svg",
             number: 3
         },
     ]
@@ -52,11 +49,11 @@ const Dashboard = () => {
                             />
                         ))
                     }
-                    <div className='bg-gray-200 flex justify-between items-center p-5 lg:col-span-3 md:col-span-2 rounded-lg'>
-                        <p className='font-semibold text-gray-600'>
-                            Income
+                    <div className='bg-gray-500 flex justify-between shadow-xl border items-center p-5 lg:col-span-3 md:col-span-2 rounded-lg'>
+                        <p className='font-bold text-2xl text-gray-200'>
+                            Balance
                         </p>
-                        <h1 className='text-3xl mt-2 font-bold'>
+                        <h1 className='text-3xl mt-2 text-white font-bold'>
                             1000 MAD
                         </h1>
                     </div>

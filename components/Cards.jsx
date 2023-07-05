@@ -6,7 +6,7 @@ const Cards = (
     }
 ) => {
   return (
-    <div className="flex cursor-pointer bg-black flex-row justify-between items-center gap-5 p-8 shadow-lg rounded-lg">
+    <div className="flex cursor-pointer bg-black flex-row justify-between items-center gap-5 p-8 shadow-xl rounded-lg">
         <div>
             <h1 className="text-md font-bold text-gray-400 capitalize">
                 {data.title}
@@ -14,14 +14,6 @@ const Cards = (
             <p className="text-3xl text-white font-bold">
                 {data.number}
             </p>
-        </div>
-        <div className="">
-            <Image 
-                src={data.image}
-                alt={data.id}
-                width={50}
-                height={50}
-            />
         </div>
     </div>
   )
